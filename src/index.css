@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: #ffc107; /* Amber text color */
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 90%; }
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+  100% { border-color: #ffc107; }
+}
+
+/* Base styles for the typewriter effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #ffc107; /* Amber color for typewriter cursor */
+  width: 100%; /* Adjusted for responsiveness */
+  max-width: 100vw; /* Ensures it doesn't exceed viewport width */
+  padding-bottom: 20px;
+  padding-right: 0.3em; /* Extra space for the cursor */
+  color: #ffc107; /* Text color */
+}
+
+/* Apply animations for non-mobile devices */
+@media (min-width: 1150px) {
+  .typewriter {
+    animation: typewriter 4s steps(40, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite; /* Added blinkCursor animation */
+  }
+}
+
+.typewriter-text {
+  border-right-color: #ffbf00; /* Lighter amber cursor color for the text */
+  animation-duration: 5s; /* Duration for typewriter effect */
+  animation: typewriter 5s steps(15, end) 1s 1 normal both, blinkCursor 0.75s step-end infinite; /* Added blinkCursor */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 1149px) {
+  .typewriter {
+    white-space: normal; /* Allow text to wrap */
+    width: auto; /* Allow width to adjust */
+    word-break: break-word; /* Break words if necessary */
+    padding-right: 0.5em; /* Adjust space for cursor */
+    animation: none; /* Disable animations on mobile devices */
+    border-right: none; /* Remove the cursor */
+  }
+}
