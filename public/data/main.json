@@ -1,0 +1,19 @@
+{
+    "image_url":"",
+    "website_name":"Engineering In Kannada",
+    "typewriter_text":"Start a Learning Journey Now.",
+    "courses":[
+          {
+            "id": 1,
+            "course_name": "DSA in Python",
+            "course_description": "Learn DSA in Python easily",
+            "course_thumbnail": "https://w0.peakpx.com/wallpaper/29/249/HD-wallpaper-python-logo-computer-lock-locked-phone-programming.jpg"
+          },
+          {
+            "id": 2,
+            "course_name": "DSA in Python",
+            "course_description": "Learn DSA in Python easily",
+            "course_thumbnail": "https://w0.peakpx.com/wallpaper/29/249/HD-wallpaper-python-logo-computer-lock-locked-phone-programming.jpg"
+          }
+    ]
+}

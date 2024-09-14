@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import logo from '../assets/logo.png';
 import Drawer from './Drawer'; // Ensure you have a correct path to the Drawer component
 
 const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const [title, setTitle] = useState("");
+
+  useEffect(() => {
+    axios.get('/data/main.json')
+      .then(response => {
+        setTitle(response.data.website_name ?? "");
+      })
+      .catch(error => console.error('Error fetching JSON data:', error));
+  }, []);
 
   const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
 
   return (
     <>
-      <nav className="bg-black border-gray-700">
+      <nav className="border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
             <img
@@ -18,7 +28,7 @@ const Navbar = () => {
               alt="Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-amber-400">
-            Engineering ಕನ್ನಡದಲ್ಲಿ
+              {title}
             </span>
           </div>
           <button
@@ -44,9 +54,7 @@ const Navbar = () => {
             </svg>
           </button>
           <div className="hidden md:flex md:space-x-8">
-            <a href="/cards" className="text-amber-400 hover:text-amber-300">View All Courses</a>
-            <a href="#" className="text-amber-400 hover:text-amber-300">Practice Now</a>
-            <a href="#" className="text-amber-400 hover:text-amber-300">Contact</a>
+            <a href="mailto:someone@gmail.com" className="text-amber-400 hover:text-amber-300">Contact</a>
           </div>
           <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
         </div>
@@ -56,6 +64,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
 

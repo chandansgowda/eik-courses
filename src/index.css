@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
+  background-color:rgb(17 24 39);
   color: #ffc107; /* Amber text color */
 }
 

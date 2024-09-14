@@ -1,0 +1,32 @@
+[
+  {
+      "id": 1,
+      "course_name": "DSA in Python",
+      "course_description": "Master the Fundamentals of Data Structure and Algorithms in Python",
+      "topic": "Introduction",
+      "article": "https://example.com/article",
+      "youtubeLink": "https://www.youtube.com",
+      "practiceLink": "https://playground.example.com",  
+      "difficulty": "Easy",
+      "revision": false,
+      "status": false,
+      "leetcodeLink": "https://leetcode.com",  
+      "geeksforgeeksLink": "https://www.geeksforgeeks.org",   
+      "codingninjasLink": "https://www.codingninjas.com"   
+  },
+  {
+      "id": 2,
+      "course_name": "DSA in Python",
+      "course_description": "Master the Fundamentals of Data Structure and Algorithms in Python",
+      "topic": "Introduction",
+      "article": "https://example.com/article",
+      "youtubeLink": "https://www.youtube.com",
+      "practiceLink": "https://playground.example.com",  
+      "difficulty": "Easy",
+      "revision": false,
+      "status": false,
+      "leetcodeLink": "https://leetcode.com",   
+      "geeksforgeeksLink": "https://www.geeksforgeeks.org",  
+      "codingninjasLink": "https://www.codingninjas.com"   
+  }
+]
